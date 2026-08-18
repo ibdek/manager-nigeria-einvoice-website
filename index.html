@@ -15,7 +15,6 @@
     :root {
       --navy: #0f2747;
       --blue: #174ea6;
-      --blue-2: #2463eb;
       --light-blue: #eef5ff;
       --green: #12805c;
       --light-green: #eefaf5;
@@ -53,6 +52,11 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(1160px, calc(100% - 40px));
       margin: auto;
@@ -74,7 +78,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
     .brand {
@@ -108,11 +112,11 @@
     nav ul {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 17px;
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       color: #435269;
     }
@@ -152,8 +156,6 @@
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
       padding: 7px 12px;
       border-radius: 999px;
       background: var(--light-blue);
@@ -327,7 +329,7 @@
     }
 
     .section-heading {
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 38px;
     }
 
@@ -409,7 +411,7 @@
       margin: 0;
     }
 
-    /* HOW IT WORKS */
+    /* PROCESS */
 
     .steps {
       display: grid;
@@ -523,6 +525,82 @@
       background: var(--light-orange);
       color: #7b4214;
       font-size: 14px;
+    }
+
+    /* DEMO */
+
+    .demo {
+      background:
+        radial-gradient(circle at top left, rgba(36,99,235,.07), transparent 28%),
+        var(--background);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .demo-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: .2s ease;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .demo-image {
+      height: 245px;
+      overflow: hidden;
+      background: #edf2f7;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .demo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .25s ease;
+    }
+
+    .demo-card:hover img {
+      transform: scale(1.02);
+    }
+
+    .demo-content {
+      padding: 22px;
+    }
+
+    .demo-content h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .demo-content p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .demo-link {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .demo-note {
+      max-width: 850px;
+      margin: 28px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     /* PRICING */
@@ -701,10 +779,6 @@
       font-size: 17px;
     }
 
-    .cta-box .button-secondary {
-      border: 0;
-    }
-
     /* FOOTER */
 
     footer {
@@ -750,9 +824,9 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
       nav ul {
-        gap: 12px;
+        gap: 10px;
         font-size: 12px;
       }
     }
@@ -769,7 +843,8 @@
         grid-template-columns: 1fr;
       }
 
-      .feature-grid {
+      .feature-grid,
+      .demo-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -788,6 +863,7 @@
       }
 
       .feature-grid,
+      .demo-grid,
       .steps,
       .mini-grid {
         grid-template-columns: 1fr;
@@ -807,6 +883,10 @@
 
       .copy-button {
         padding: 12px;
+      }
+
+      .demo-image {
+        height: 220px;
       }
     }
   </style>
@@ -831,6 +911,7 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#setup">Setup</a></li>
+        <li><a href="#demo">Demo</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#support">Support</a></li>
@@ -869,20 +950,12 @@
 
         <div class="button-row">
 
-          <a
-            class="button button-primary"
-            href="#setup"
-          >
+          <a class="button button-primary" href="#setup">
             Start Setup
           </a>
 
-          <a
-            class="button button-secondary"
-            href="https://selar.com/95y9z7s656"
-            target="_blank"
-            rel="noopener"
-          >
-            Pay Annual Access
+          <a class="button button-secondary" href="#demo">
+            See It In Action
           </a>
 
           <a
@@ -956,10 +1029,7 @@
     <div class="container">
 
       <div class="section-heading center">
-
-        <div class="section-kicker">
-          What the platform does
-        </div>
+        <div class="section-kicker">What the platform does</div>
 
         <h2>
           Built around the Manager.io invoicing workflow
@@ -969,77 +1039,58 @@
           Process Nigeria e-invoices while continuing to use your normal
           Manager.io accounting workflow.
         </p>
-
       </div>
-
 
       <div class="feature-grid">
 
         <div class="feature-card">
           <div class="feature-icon">01</div>
-
           <h3>Sales Invoice Processing</h3>
-
           <p>
             Validate, sign and submit Manager.io Sales Invoices to the
             configured MBS/NRS environment.
           </p>
         </div>
 
-
         <div class="feature-card">
           <div class="feature-icon">02</div>
-
           <h3>Credit Notes</h3>
-
           <p>
             Process Credit Notes with verified linkage to the original
             submitted invoice and its NRS IRN.
           </p>
         </div>
 
-
         <div class="feature-card">
           <div class="feature-icon">03</div>
-
           <h3>TEST & PRODUCTION</h3>
-
           <p>
             Server-locked TEST and PRODUCTION routes keep sandbox processing
             separate from official production records.
           </p>
         </div>
 
-
         <div class="feature-card">
           <div class="feature-icon">04</div>
-
           <h3>NRS IRN & QR Code</h3>
-
           <p>
             Write the issued NRS IRN and encrypted QR image back into
             Manager.io for customer-facing documents.
           </p>
         </div>
 
-
         <div class="feature-card">
           <div class="feature-icon">05</div>
-
           <h3>Payment Status Sync</h3>
-
           <p>
             Synchronise final payment status after Manager.io confirms that
             the invoice closing balance has reached zero.
           </p>
         </div>
 
-
         <div class="feature-card">
           <div class="feature-icon">06</div>
-
           <h3>Business-Scoped Security</h3>
-
           <p>
             Each Manager.io business uses its own tenant record, encrypted
             credentials, subscription and processing history.
@@ -1047,7 +1098,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1058,10 +1108,7 @@
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-kicker">
-          Customer journey
-        </div>
+        <div class="section-kicker">Customer journey</div>
 
         <h2>
           From installation to live processing
@@ -1071,20 +1118,15 @@
           New businesses can complete the normal onboarding journey with
           minimal administrator intervention.
         </p>
-
       </div>
-
 
       <div class="steps">
 
         <div class="step">
           <div class="step-number">1</div>
           <h3>Create Bootstrap Button</h3>
-          <p>
-            Add the initial Nigeria E-Invoicing Custom Button in Manager.io.
-          </p>
+          <p>Add the initial Nigeria E-Invoicing Custom Button in Manager.io.</p>
         </div>
-
 
         <div class="step">
           <div class="step-number">2</div>
@@ -1095,7 +1137,6 @@
           </p>
         </div>
 
-
         <div class="step">
           <div class="step-number">3</div>
           <h3>Register Seller TIN</h3>
@@ -1105,16 +1146,13 @@
           </p>
         </div>
 
-
         <div class="step">
           <div class="step-number">4</div>
           <h3>Configure TEST</h3>
           <p>
-            Enter the tenant TEST credentials and confirm the MBS/NRS
-            connection.
+            Enter the tenant TEST credentials and confirm the MBS/NRS connection.
           </p>
         </div>
-
 
         <div class="step">
           <div class="step-number">5</div>
@@ -1125,16 +1163,13 @@
           </p>
         </div>
 
-
         <div class="step">
           <div class="step-number">6</div>
           <h3>Configure PRODUCTION</h3>
           <p>
-            Save, test and activate the tenant's separate live Production
-            profile.
+            Save, test and activate the tenant's separate live Production profile.
           </p>
         </div>
-
 
         <div class="step">
           <div class="step-number">7</div>
@@ -1143,7 +1178,6 @@
             Process official invoices through the Production Custom Buttons.
           </p>
         </div>
-
 
         <div class="step">
           <div class="step-number">8</div>
@@ -1155,7 +1189,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1166,10 +1199,7 @@
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-kicker">
-          Installation
-        </div>
+        <div class="section-kicker">Installation</div>
 
         <h2>
           Start from one Manager.io Custom Button
@@ -1179,24 +1209,14 @@
           The bootstrap button launches the guided setup. The installer then
           creates or repairs the required integration components.
         </p>
-
       </div>
-
 
       <div class="setup-box">
 
         <div class="setup-header">
-
-          <h3>
-            Manager.io Bootstrap Setup
-          </h3>
-
-          <p>
-            Add this URL to the initial Nigeria E-Invoicing Custom Button.
-          </p>
-
+          <h3>Manager.io Bootstrap Setup</h3>
+          <p>Add this URL to the initial Nigeria E-Invoicing Custom Button.</p>
         </div>
-
 
         <div class="setup-body">
 
@@ -1206,10 +1226,7 @@
 
           <div class="url-box">
 
-            <div
-              class="url-value"
-              id="bootstrapUrl"
-            >
+            <div class="url-value" id="bootstrapUrl">
               https://einvoice.adib.com.ng/extension/invoice
             </div>
 
@@ -1223,25 +1240,167 @@
 
           </div>
 
-
           <p>
             After opening the bootstrap button from inside Manager.io,
             choose <strong>Install Nigeria E-Invoicing</strong> and follow
             the guided registration process.
           </p>
 
-
           <div class="setup-warning">
-
             TEST and PRODUCTION extension routes are designed to be launched
             from inside Manager.io so the current business and document
             context can be detected correctly.
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DEMO -->
+
+  <section id="demo" class="demo">
+    <div class="container">
+
+      <div class="section-heading center">
+
+        <div class="section-kicker">
+          See It In Action
+        </div>
+
+        <h2>
+          Real Manager.io e-invoicing workflow
+        </h2>
+
+        <p>
+          These screenshots show actual parts of the Manager.io Nigeria
+          E-invoice Connector workflow, from transaction processing to the
+          final customer-facing NRS IRN and QR Code.
+        </p>
+
+      </div>
+
+
+      <div class="demo-grid">
+
+        <div class="demo-card">
+
+          <a
+            href="images/sales-invoice.png"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="demo-image">
+              <img
+                src="images/sales-invoice.png"
+                alt="Manager.io Nigeria E-Invoice Sales Invoice processing screen"
+                loading="lazy"
+              >
+            </div>
+          </a>
+
+          <div class="demo-content">
+            <h3>Sales Invoice Processing</h3>
+
+            <p>
+              Process Manager.io Sales Invoices through the appropriate
+              TEST or PRODUCTION e-invoicing route.
+            </p>
+
+            <a
+              class="demo-link"
+              href="images/sales-invoice.png"
+              target="_blank"
+              rel="noopener"
+            >
+              View larger screenshot →
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="demo-card">
+
+          <a
+            href="images/credit-note.png"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="demo-image">
+              <img
+                src="images/credit-note.png"
+                alt="Manager.io Nigeria E-Invoice Credit Note processing screen"
+                loading="lazy"
+              >
+            </div>
+          </a>
+
+          <div class="demo-content">
+            <h3>Credit Note Processing</h3>
+
+            <p>
+              Credit Notes retain verified linkage to the corresponding
+              original invoice and NRS IRN.
+            </p>
+
+            <a
+              class="demo-link"
+              href="images/credit-note.png"
+              target="_blank"
+              rel="noopener"
+            >
+              View larger screenshot →
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="demo-card">
+
+          <a
+            href="images/invoice-print.png"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="demo-image">
+              <img
+                src="images/invoice-print.png"
+                alt="Manager.io invoice print showing NRS IRN and QR Code"
+                loading="lazy"
+              >
+            </div>
+          </a>
+
+          <div class="demo-content">
+            <h3>NRS IRN & QR on Invoice</h3>
+
+            <p>
+              The customer-facing Manager.io document can display the
+              official NRS IRN and QR Code while operational fields remain hidden.
+            </p>
+
+            <a
+              class="demo-link"
+              href="images/invoice-print.png"
+              target="_blank"
+              rel="noopener"
+            >
+              View larger screenshot →
+            </a>
           </div>
 
         </div>
 
       </div>
+
+
+      <p class="demo-note">
+        Screens shown are for product demonstration. Transaction values,
+        invoice references and environments may vary by registered business.
+      </p>
 
     </div>
   </section>
@@ -1254,9 +1413,7 @@
 
       <div class="section-heading center">
 
-        <div class="section-kicker">
-          Access
-        </div>
+        <div class="section-kicker">Access</div>
 
         <h2>
           Start with a trial. Upgrade when ready.
@@ -1265,7 +1422,6 @@
         <p>
           The annual plan applies per registered Manager.io business.
         </p>
-
       </div>
 
 
@@ -1273,9 +1429,7 @@
 
         <div class="price-card">
 
-          <div class="price-label">
-            Free Trial
-          </div>
+          <div class="price-label">Free Trial</div>
 
           <div class="price">
             ₦0
@@ -1290,10 +1444,7 @@
             <li>Production profile can be prepared during trial</li>
           </ul>
 
-          <a
-            class="button button-secondary"
-            href="#setup"
-          >
+          <a class="button button-secondary" href="#setup">
             Start Setup
           </a>
 
@@ -1302,9 +1453,7 @@
 
         <div class="price-card featured">
 
-          <div class="price-label">
-            Annual Access
-          </div>
+          <div class="price-label">Annual Access</div>
 
           <div class="price">
             ₦280,000
@@ -1331,7 +1480,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1342,23 +1490,12 @@
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-kicker">
-          Frequently asked questions
-        </div>
-
-        <h2>
-          Common onboarding questions
-        </h2>
-
+        <div class="section-kicker">Frequently asked questions</div>
+        <h2>Common onboarding questions</h2>
       </div>
 
-
       <details>
-        <summary>
-          Do TEST transactions affect official PRODUCTION records?
-        </summary>
-
+        <summary>Do TEST transactions affect official PRODUCTION records?</summary>
         <p>
           No. The application uses separate server-locked TEST and
           PRODUCTION routes with separate environment credentials and
@@ -1366,12 +1503,8 @@
         </p>
       </details>
 
-
       <details>
-        <summary>
-          How many free submissions are included?
-        </summary>
-
+        <summary>How many free submissions are included?</summary>
         <p>
           A newly registered business receives 10 successful trial
           submissions. Failed validations or status checks do not count as
@@ -1379,24 +1512,16 @@
         </p>
       </details>
 
-
       <details>
-        <summary>
-          Can Production be configured during the trial?
-        </summary>
-
+        <summary>Can Production be configured during the trial?</summary>
         <p>
           Yes. A customer may configure, test and activate the separate
           Production profile while trial access is still available.
         </p>
       </details>
 
-
       <details>
-        <summary>
-          What appears on the customer invoice?
-        </summary>
-
+        <summary>What appears on the customer invoice?</summary>
         <p>
           The standard customer-facing e-invoicing print profile is designed
           to expose the NRS IRN and NRS QR Code while keeping operational
@@ -1404,12 +1529,8 @@
         </p>
       </details>
 
-
       <details>
-        <summary>
-          How does annual payment work?
-        </summary>
-
+        <summary>How does annual payment work?</summary>
         <p>
           Annual access is paid through the configured Selar checkout.
           After payment is verified, the tenant continues under the
@@ -1417,12 +1538,8 @@
         </p>
       </details>
 
-
       <details>
-        <summary>
-          Where can I get technical support?
-        </summary>
-
+        <summary>Where can I get technical support?</summary>
         <p>
           Contact the Adib Tech Team through WhatsApp on
           +234 803 567 4941 or by email at adek4971@gmail.com.
@@ -1544,10 +1661,7 @@
           and move to Production when your business is ready.
         </p>
 
-        <div
-          class="button-row"
-          style="justify-content:center;"
-        >
+        <div class="button-row" style="justify-content:center;">
 
           <a
             class="button button-secondary"
@@ -1577,7 +1691,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1585,7 +1698,6 @@
 
 
 <footer>
-
   <div class="container">
 
     <div class="footer-grid">
@@ -1598,15 +1710,13 @@
 
         <p>
           An independent integration solution designed to connect
-          Manager.io accounting workflows with Nigeria e-invoicing
-          processing.
+          Manager.io accounting workflows with Nigeria e-invoicing processing.
         </p>
 
         <p>
           This website is not an official Nigeria Revenue Service,
-          MBS or Manager.io government website. References to
-          third-party services are used only to describe integration
-          functionality.
+          MBS or Manager.io government website. References to third-party
+          services are used only to describe integration functionality.
         </p>
 
         <p>
@@ -1619,33 +1729,15 @@
 
       <div class="footer-links">
 
-        <strong>
-          Quick Links
-        </strong>
+        <strong>Quick Links</strong>
 
-        <a href="#features">
-          Features
-        </a>
-
-        <a href="#how-it-works">
-          How It Works
-        </a>
-
-        <a href="#setup">
-          Setup
-        </a>
-
-        <a href="#pricing">
-          Pricing
-        </a>
-
-        <a href="#faq">
-          FAQ
-        </a>
-
-        <a href="#support">
-          Support
-        </a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#setup">Setup</a>
+        <a href="#demo">See It In Action</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
 
         <a
           href="https://wa.me/2348035674941"
@@ -1673,15 +1765,12 @@
 
 
     <div class="copyright">
-
       © <span id="year"></span>
       Manager.io Nigeria E-invoice Connector.
       All rights reserved. Developed & Supported by Adib Tech Team.
-
     </div>
 
   </div>
-
 </footer>
 
 
@@ -1689,7 +1778,6 @@
 
   document.getElementById("year").textContent =
     new Date().getFullYear();
-
 
   function copyBootstrapUrl() {
 
@@ -1709,18 +1797,13 @@
         const originalText =
           button.textContent;
 
-        button.textContent =
-          "Copied";
+        button.textContent = "Copied";
 
         setTimeout(() => {
-
-          button.textContent =
-            originalText;
-
+          button.textContent = originalText;
         }, 1800);
 
       });
-
   }
 
 </script>
