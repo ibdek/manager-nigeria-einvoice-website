@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Disclaimer | Manager.io Nigeria E-invoice Connector</title>
+
+  <meta
+    name="description"
+    content="Disclaimer for Manager.io Nigeria E-invoice Connector, an independent integration solution developed and supported by Adib Tech Team."
+  >
+
+  <style>
+    :root {
+      --navy: #0f2747;
+      --blue: #174ea6;
+      --green: #12805c;
+      --red: #bd2c23;
+      --orange: #d95d00;
+      --light-blue: #eef5ff;
+      --light-green: #eefaf5;
+      --light-red: #fff1ef;
+      --light-orange: #fff5eb;
+      --text: #1d2a3a;
+      --muted: #617085;
+      --border: #dce5ef;
+      --background: #f7f9fc;
+      --white: #ffffff;
+      --shadow: 0 15px 40px rgba(15, 39, 71, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1040px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: .6px;
+    }
+
+    .back-link {
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--navy);
+      background: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .back-link:hover {
+      border-color: var(--blue);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 70px 0 45px;
+      background:
+        radial-gradient(circle at top right, rgba(217,93,0,.11), transparent 32%),
+        linear-gradient(180deg, #ffffff, #f7f9fc);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--light-orange);
+      color: var(--orange);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(38px, 6vw, 58px);
+      line-height: 1.08;
+      margin: 15px 0 12px;
+      letter-spacing: -1.8px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .updated {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      padding: 45px 0 80px;
+    }
+
+    .legal-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      background: var(--light-orange);
+      border-left: 4px solid var(--orange);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 32px;
+      color: #704218;
+    }
+
+    .independent-box {
+      background: var(--light-red);
+      border: 1px solid #ffd4cf;
+      border-left: 4px solid var(--red);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 26px 0;
+    }
+
+    .independent-box strong {
+      color: var(--red);
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 24px;
+      margin: 38px 0 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-top: 24px;
+    }
+
+    p, li {
+      color: #4d5c70;
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .info-box {
+      background: var(--light-blue);
+      border: 1px solid #d7e5fb;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .info-box strong {
+      color: var(--navy);
+    }
+
+    .rights-box {
+      background: var(--light-green);
+      border-left: 4px solid var(--green);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 25px 0;
+      color: #315e4d;
+    }
+
+    .contact-box {
+      margin-top: 38px;
+      background: var(--light-green);
+      border: 1px solid #ccebdd;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .contact-box strong {
+      color: var(--navy);
+    }
+
+    footer {
+      background: #0b1e37;
+      color: #9eafc4;
+      padding: 35px 0;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer a {
+      color: #d8e5f6;
+      margin-right: 16px;
+      font-size: 13px;
+    }
+
+    footer p {
+      color: #9eafc4;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 24px, 1040px);
+      }
+
+      .legal-card {
+        padding: 25px 20px;
+      }
+
+      .brand div:last-child {
+        font-size: 13px;
+      }
+
+      .back-link {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      <div class="brand-mark">EI</div>
+
+      <div>
+        Manager.io Nigeria E-invoice Connector
+        <small>MBS / NRS Connector</small>
+      </div>
+    </a>
+
+    <a class="back-link" href="index.html">
+      ← Back to Website
+    </a>
+
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Important Information
+    </div>
+
+    <h1>
+      Disclaimer
+    </h1>
+
+    <p>
+      This Disclaimer explains the independent status, intended purpose,
+      third-party dependencies and limitations of Manager.io Nigeria
+      E-invoice Connector.
+    </p>
+
+    <div class="updated">
+      Effective date: 18 August 2026
+    </div>
+
+  </div>
+</section>
+
+
+<main>
+  <div class="container">
+
+    <div class="legal-card">
+
+      <div class="notice">
+        Please read this Disclaimer together with our
+        <a href="terms.html">Terms of Service</a>
+        and
+        <a href="privacy.html">Privacy Policy</a>.
+      </div>
+
+
+      <h2>1. Independent Integration Solution</h2>
+
+      <div class="independent-box">
+        <strong>Important:</strong>
+        Manager.io Nigeria E-invoice Connector is an independent
+        software integration solution developed and supported by
+        Adib Tech Team.
+      </div>
+
+      <p>
+        The Connector is not an official website, application,
+        department or service of the Nigeria Revenue Service,
+        Manager.io, any Merchant Buyer Solution provider, or any
+        other government agency or third-party platform unless
+        expressly stated otherwise in writing.
+      </p>
+
+      <p>
+        The appearance of third-party names, terminology or
+        integration references on this website does not by itself
+        mean that such organisation has sponsored, endorsed,
+        certified or approved the Connector.
+      </p>
+
+
+      <h2>2. No Government Representation</h2>
+
+      <p>
+        Adib Tech Team does not represent itself as the Nigeria
+        Revenue Service or any government authority.
+      </p>
+
+      <p>
+        The Connector is designed only to assist businesses in using
+        Manager.io with supported Nigeria e-invoicing workflows and
+        applicable third-party infrastructure.
+      </p>
+
+      <p>
+        Official tax, e-invoicing, registration, compliance or
+        regulatory information should be confirmed through the
+        relevant government authority or authorised service channel.
+      </p>
+
+
+      <h2>3. Third-Party Names and Trademarks</h2>
+
+      <p>
+        Names including Manager.io, NRS, MBS, Selar, DigitalOcean,
+        GitHub and other third-party names, trademarks, logos or
+        service descriptions remain the property of their respective
+        owners.
+      </p>
+
+      <p>
+        References to these services are made solely to describe
+        compatibility, integration, payment, infrastructure or
+        operational relationships relevant to the Connector.
+      </p>
+
+
+      <h2>4. Nature of the Connector</h2>
+
+      <p>
+        Manager.io Nigeria E-invoice Connector is a technical
+        integration tool.
+      </p>
+
+      <p>
+        Depending on the registered business and configuration,
+        the Connector may assist with functions such as:
+      </p>
+
+      <ul>
+        <li>Manager.io onboarding;</li>
+        <li>TEST and PRODUCTION configuration;</li>
+        <li>Sales Invoice processing;</li>
+        <li>Credit Note processing;</li>
+        <li>NRS IRN write-back;</li>
+        <li>NRS QR Code write-back;</li>
+        <li>payment-status synchronisation;</li>
+        <li>subscription administration; and</li>
+        <li>technical integration support.</li>
+      </ul>
+
+
+      <h2>5. No Guarantee of Government Acceptance</h2>
+
+      <p>
+        Use of the Connector does not guarantee that a particular
+        invoice, Credit Note, registration, taxpayer record,
+        transaction or submission will be accepted by NRS, MBS or
+        any third-party system.
+      </p>
+
+      <p>
+        Acceptance may depend on matters outside the Connector's
+        direct control, including:
+      </p>
+
+      <ul>
+        <li>the accuracy of customer data;</li>
+        <li>the status of the taxpayer or business;</li>
+        <li>the validity of credentials;</li>
+        <li>required classifications and codes;</li>
+        <li>third-party validation rules;</li>
+        <li>regulatory requirements;</li>
+        <li>availability of external systems; and</li>
+        <li>changes made by the relevant service provider.</li>
+      </ul>
+
+
+      <h2>6. No Guarantee of Tax or Regulatory Compliance</h2>
+
+      <p>
+        Successful processing through the Connector does not by
+        itself guarantee that a business has satisfied every tax,
+        accounting, invoicing or regulatory obligation applicable
+        to it.
+      </p>
+
+      <p>
+        Each business remains responsible for determining and
+        complying with its own legal, tax and regulatory obligations.
+      </p>
+
+
+      <h2>7. No Tax, Legal or Professional Advice</h2>
+
+      <p>
+        Information provided on this website or through the technical
+        interface is intended to explain the Connector and its
+        operation.
+      </p>
+
+      <p>
+        It should not be treated as a substitute for professional:
+      </p>
+
+      <ul>
+        <li>tax advice;</li>
+        <li>legal advice;</li>
+        <li>accounting advice;</li>
+        <li>data-protection advice;</li>
+        <li>regulatory advice; or</li>
+        <li>official guidance from the relevant authority.</li>
+      </ul>
+
+      <p>
+        Where professional advice is required, users should consult
+        an appropriately qualified adviser.
+      </p>
+
+
+      <h2>8. Customer Data Responsibility</h2>
+
+      <p>
+        The business using the Connector remains responsible for
+        information entered into Manager.io and submitted for
+        e-invoicing processing.
+      </p>
+
+      <p>
+        This includes the accuracy of:
+      </p>
+
+      <ul>
+        <li>Seller TIN;</li>
+        <li>business information;</li>
+        <li>buyer or customer information;</li>
+        <li>invoice dates and references;</li>
+        <li>items or services;</li>
+        <li>quantities and prices;</li>
+        <li>tax calculations;</li>
+        <li>country codes;</li>
+        <li>currencies;</li>
+        <li>HSN or service classifications;</li>
+        <li>unit codes; and</li>
+        <li>other information required for processing.</li>
+      </ul>
+
+
+      <h2>9. TEST Environment Disclaimer</h2>
+
+      <p>
+        TEST or SANDBOX processing is intended for testing,
+        configuration and verification purposes.
+      </p>
+
+      <div class="info-box">
+        <strong>TEST results are not PRODUCTION submissions.</strong>
+        A successful TEST transaction should not be interpreted as
+        evidence that the same transaction has been officially
+        submitted or accepted in the live PRODUCTION environment.
+      </div>
+
+      <p>
+        TEST IRNs, QR Codes, statuses or other results should not be
+        confused with official live records.
+      </p>
+
+
+      <h2>10. PRODUCTION Environment Disclaimer</h2>
+
+      <p>
+        PRODUCTION processing should be used only after the registered
+        business has:
+      </p>
+
+      <ul>
+        <li>the appropriate live registration or enablement;</li>
+        <li>valid PRODUCTION credentials;</li>
+        <li>successfully tested its PRODUCTION profile; and</li>
+        <li>confirmed that it is ready for genuine live processing.</li>
+      </ul>
+
+      <p>
+        The user initiating a PRODUCTION transaction is responsible
+        for confirming that the intended document should be submitted
+        to the live environment.
+      </p>
+
+
+      <h2>11. Third-Party Service Availability</h2>
+
+      <p>
+        The Connector depends on services and infrastructure operated
+        by third parties.
+      </p>
+
+      <p>
+        Functionality may therefore be affected by:
+      </p>
+
+      <ul>
+        <li>Manager.io updates;</li>
+        <li>NRS/MBS maintenance;</li>
+        <li>API changes;</li>
+        <li>TLS or certificate changes;</li>
+        <li>hosting-provider maintenance;</li>
+        <li>internet or network outages;</li>
+        <li>DNS failures;</li>
+        <li>payment-provider outages;</li>
+        <li>credential changes; or</li>
+        <li>other external events.</li>
+      </ul>
+
+      <p>
+        Adib Tech Team does not control the continuous availability
+        or functionality of independent third-party systems.
+      </p>
+
+
+      <h2>12. Software and Regulatory Changes</h2>
+
+      <p>
+        Nigeria e-invoicing requirements, third-party APIs,
+        Manager.io functionality and other technical requirements
+        may change over time.
+      </p>
+
+      <p>
+        The Connector may therefore require updates, configuration
+        changes or maintenance to remain compatible with such changes.
+      </p>
+
+      <p>
+        We may update the Service where reasonably necessary to
+        maintain security, functionality or compatibility.
+      </p>
+
+
+      <h2>13. IRNs, QR Codes and Status Information</h2>
+
+      <p>
+        IRNs, QR Codes and status information displayed or written
+        into Manager.io are based on information processed or returned
+        by the relevant integration workflow.
+      </p>
+
+      <p>
+        Users should investigate any inconsistency before repeatedly
+        submitting the same document.
+      </p>
+
+      <p>
+        Where an invoice already has an IRN or indicates a submitted
+        status, users should normally confirm the existing transaction
+        status before attempting another submission.
+      </p>
+
+
+      <h2>14. Payment Status</h2>
+
+      <p>
+        Payment-status synchronisation does not replace proper
+        accounting records in Manager.io or the business's own
+        responsibility to reconcile payments.
+      </p>
+
+      <p>
+        Users remain responsible for confirming that the underlying
+        payment evidence and Manager.io balance are correct.
+      </p>
+
+
+      <h2>15. Screenshots and Demonstrations</h2>
+
+      <p>
+        Screenshots shown on the public website are provided to
+        demonstrate the type of workflow available through the Connector.
+      </p>
+
+      <p>
+        Demo business names, transaction amounts, invoice numbers,
+        IRNs, dates, statuses and other displayed information may be
+        illustrative, anonymised or taken from controlled test activity.
+      </p>
+
+      <p>
+        A customer's actual interface or results may differ according
+        to its Manager.io configuration, MBS/NRS environment,
+        subscription status and transaction data.
+      </p>
+
+
+      <h2>16. Pricing Information</h2>
+
+      <p>
+        Pricing displayed on the website is intended to represent
+        the current publicly offered plan at the time it is displayed.
+      </p>
+
+      <p>
+        Future pricing may change. The applicable price should be
+        confirmed at the point of purchase or renewal.
+      </p>
+
+
+      <h2>17. External Payment Services</h2>
+
+      <p>
+        Where payment is completed through Selar or another external
+        payment provider, that provider operates its own checkout,
+        payment-processing and privacy arrangements.
+      </p>
+
+      <p>
+        Adib Tech Team does not request a customer's card PIN,
+        online banking password or other credentials that should
+        remain exclusively between the customer and its payment provider.
+      </p>
+
+
+      <h2>18. External Links</h2>
+
+      <p>
+        This website may contain links to external websites and
+        services.
+      </p>
+
+      <p>
+        A link does not necessarily mean that Adib Tech Team controls
+        or endorses all information contained on the external site.
+      </p>
+
+      <p>
+        Users should review the terms, privacy policies and security
+        practices of external services before using them.
+      </p>
+
+
+      <h2>19. Security</h2>
+
+      <p>
+        Reasonable measures are used to protect the Connector and
+        sensitive tenant configuration, but no internet-connected
+        system can guarantee absolute security.
+      </p>
+
+      <p>
+        Customers are responsible for protecting their own Manager.io
+        credentials, devices, email accounts, MBS/NRS credentials and
+        other access information.
+      </p>
+
+
+      <h2>20. Technical Support</h2>
+
+      <p>
+        Adib Tech Team may provide technical guidance relating to
+        setup, configuration, processing and troubleshooting of the
+        Connector.
+      </p>
+
+      <p>
+        Technical support does not transfer responsibility for the
+        customer's accounting records, tax compliance or regulatory
+        decisions to Adib Tech Team.
+      </p>
+
+
+      <h2>21. Service Availability</h2>
+
+      <p>
+        We aim to provide a reliable service, but we do not promise
+        that the Connector will always be available without
+        interruption, delay or error.
+      </p>
+
+      <p>
+        Planned or emergency maintenance may occasionally affect
+        availability.
+      </p>
+
+
+      <h2>22. Limitation of Disclaimer</h2>
+
+      <div class="rights-box">
+        Nothing in this Disclaimer is intended to exclude, waive or
+        restrict any consumer right, legal remedy, statutory duty or
+        liability that cannot lawfully be excluded under applicable
+        Nigerian law.
+      </div>
+
+      <p>
+        This Disclaimer should therefore be interpreted together with
+        applicable law and our
+        <a href="terms.html">Terms of Service</a>.
+      </p>
+
+
+      <h2>23. Changes to This Disclaimer</h2>
+
+      <p>
+        This Disclaimer may be updated to reflect changes in the
+        Connector, third-party services, applicable law or
+        operational practices.
+      </p>
+
+      <p>
+        The current version will be published on this website with
+        its applicable effective date.
+      </p>
+
+
+      <h2>24. Contact</h2>
+
+      <div class="contact-box">
+
+        <strong>Adib Tech Team</strong>
+
+        <p>
+          Support for Manager.io Nigeria E-invoice Connector
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:adek4971@gmail.com">
+            adek4971@gmail.com
+          </a>
+        </p>
+
+        <p>
+          WhatsApp:
+          <a
+            href="https://wa.me/2348035674941"
+            target="_blank"
+            rel="noopener"
+          >
+            +234 803 567 4941
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <div class="footer-row">
+
+      <div>
+        <strong>Manager.io Nigeria E-invoice Connector</strong>
+      </div>
+
+      <div>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+
+    </div>
+
+    <p>
+      © <span id="year"></span> Manager.io Nigeria E-invoice Connector.
+      Developed & Supported by Adib Tech Team.
+    </p>
+
+  </div>
+</footer>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
