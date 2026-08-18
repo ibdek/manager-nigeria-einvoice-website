@@ -112,11 +112,11 @@
     nav ul {
       display: flex;
       align-items: center;
-      gap: 17px;
+      gap: 14px;
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: #435269;
     }
@@ -603,6 +603,68 @@
       font-size: 13px;
     }
 
+    /* WHO IS THIS FOR */
+
+    .audience {
+      background: white;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .audience-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #ffffff;
+      padding: 24px 20px;
+      transition: .2s ease;
+    }
+
+    .audience-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .audience-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--light-green);
+      color: var(--green);
+      font-weight: 900;
+      font-size: 18px;
+      margin-bottom: 17px;
+    }
+
+    .audience-card h3 {
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.25;
+      margin: 0 0 9px;
+    }
+
+    .audience-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .audience-note {
+      max-width: 850px;
+      margin: 28px auto 0;
+      padding: 18px 22px;
+      border-radius: 14px;
+      background: var(--light-blue);
+      color: #37577f;
+      text-align: center;
+      font-size: 14px;
+    }
+
     /* PRICING */
 
     .pricing-grid {
@@ -824,10 +886,14 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1100px) {
       nav ul {
-        gap: 10px;
-        font-size: 12px;
+        gap: 9px;
+        font-size: 11px;
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -852,6 +918,10 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .audience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .hero {
         padding-top: 65px;
       }
@@ -865,7 +935,8 @@
       .feature-grid,
       .demo-grid,
       .steps,
-      .mini-grid {
+      .mini-grid,
+      .audience-grid {
         grid-template-columns: 1fr;
       }
 
@@ -912,6 +983,7 @@
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#setup">Setup</a></li>
         <li><a href="#demo">Demo</a></li>
+        <li><a href="#audience">Who It's For</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#support">Support</a></li>
@@ -1031,9 +1103,7 @@
       <div class="section-heading center">
         <div class="section-kicker">What the platform does</div>
 
-        <h2>
-          Built around the Manager.io invoicing workflow
-        </h2>
+        <h2>Built around the Manager.io invoicing workflow</h2>
 
         <p>
           Process Nigeria e-invoices while continuing to use your normal
@@ -1110,9 +1180,7 @@
       <div class="section-heading">
         <div class="section-kicker">Customer journey</div>
 
-        <h2>
-          From installation to live processing
-        </h2>
+        <h2>From installation to live processing</h2>
 
         <p>
           New businesses can complete the normal onboarding journey with
@@ -1201,9 +1269,7 @@
       <div class="section-heading">
         <div class="section-kicker">Installation</div>
 
-        <h2>
-          Start from one Manager.io Custom Button
-        </h2>
+        <h2>Start from one Manager.io Custom Button</h2>
 
         <p>
           The bootstrap button launches the guided setup. The installer then
@@ -1406,6 +1472,104 @@
   </section>
 
 
+  <!-- WHO IS THIS FOR -->
+
+  <section id="audience" class="audience">
+    <div class="container">
+
+      <div class="section-heading center">
+
+        <div class="section-kicker">
+          Who Is This For?
+        </div>
+
+        <h2>
+          Designed for businesses and professionals using Manager.io
+        </h2>
+
+        <p>
+          The connector is intended for organisations already using
+          Manager.io and needing a practical route into Nigeria
+          e-invoicing through the MBS/NRS ecosystem.
+        </p>
+
+      </div>
+
+
+      <div class="audience-grid">
+
+        <div class="audience-card">
+          <div class="audience-icon">NG</div>
+
+          <h3>Nigerian Businesses</h3>
+
+          <p>
+            SMEs and larger organisations using Manager.io for accounting,
+            invoicing and customer management.
+          </p>
+        </div>
+
+
+        <div class="audience-card">
+          <div class="audience-icon">✓</div>
+
+          <h3>E-Invoicing Enabled Businesses</h3>
+
+          <p>
+            Businesses already onboarded or enabled for Nigeria
+            NRS/MBS e-invoicing processing.
+          </p>
+        </div>
+
+
+        <div class="audience-card">
+          <div class="audience-icon">AC</div>
+
+          <h3>Accountants & Consultants</h3>
+
+          <p>
+            Accounting firms and implementation consultants managing
+            one or more Manager.io businesses.
+          </p>
+        </div>
+
+
+        <div class="audience-card">
+          <div class="audience-icon">T/P</div>
+
+          <h3>TEST & PRODUCTION Users</h3>
+
+          <p>
+            Businesses requiring strict separation between sandbox
+            testing and official production e-invoice processing.
+          </p>
+        </div>
+
+
+        <div class="audience-card">
+          <div class="audience-icon">INV</div>
+
+          <h3>Sales & Credit Note Issuers</h3>
+
+          <p>
+            Businesses that issue Sales Invoices and Credit Notes
+            to customers through Manager.io.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="audience-note">
+        Before live Production processing, the business should already have
+        the appropriate Nigeria e-invoicing registration, MBS/NRS credentials
+        and access required for its environment.
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- PRICING -->
 
   <section id="pricing">
@@ -1535,6 +1699,15 @@
           Annual access is paid through the configured Selar checkout.
           After payment is verified, the tenant continues under the
           365-day annual plan.
+        </p>
+      </details>
+
+      <details>
+        <summary>Who can use the connector?</summary>
+        <p>
+          It is intended for businesses using Manager.io that have or are
+          preparing the appropriate Nigeria e-invoicing MBS/NRS access,
+          as well as accountants and consultants supporting such businesses.
         </p>
       </details>
 
@@ -1735,6 +1908,7 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#setup">Setup</a>
         <a href="#demo">See It In Action</a>
+        <a href="#audience">Who It's For</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#support">Support</a>
