@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms of Service | Manager.io Nigeria E-invoice Connector</title>
+
+  <meta
+    name="description"
+    content="Terms of Service for Manager.io Nigeria E-invoice Connector, developed and supported by Adib Tech Team."
+  >
+
+  <style>
+    :root {
+      --navy: #0f2747;
+      --blue: #174ea6;
+      --green: #12805c;
+      --light-blue: #eef5ff;
+      --light-green: #eefaf5;
+      --light-orange: #fff5eb;
+      --orange: #d95d00;
+      --text: #1d2a3a;
+      --muted: #617085;
+      --border: #dce5ef;
+      --background: #f7f9fc;
+      --white: #ffffff;
+      --shadow: 0 15px 40px rgba(15, 39, 71, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1040px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: .6px;
+    }
+
+    .back-link {
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--navy);
+      background: white;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .back-link:hover {
+      border-color: var(--blue);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 70px 0 45px;
+      background:
+        radial-gradient(circle at top right, rgba(36,99,235,.12), transparent 32%),
+        linear-gradient(180deg, #ffffff, #f7f9fc);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(38px, 6vw, 58px);
+      line-height: 1.08;
+      margin: 15px 0 12px;
+      letter-spacing: -1.8px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .updated {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      padding: 45px 0 80px;
+    }
+
+    .legal-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      background: var(--light-blue);
+      border-left: 4px solid var(--blue);
+      border-radius: 10px;
+      padding: 17px 19px;
+      margin-bottom: 32px;
+      color: #365477;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 24px;
+      margin: 38px 0 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-top: 24px;
+    }
+
+    p, li {
+      color: #4d5c70;
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .important {
+      background: var(--light-orange);
+      border-left: 4px solid var(--orange);
+      border-radius: 10px;
+      padding: 17px 19px;
+      margin: 24px 0;
+      color: #704218;
+    }
+
+    .contact-box {
+      margin-top: 38px;
+      background: var(--light-green);
+      border: 1px solid #ccebdd;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .contact-box strong {
+      color: var(--navy);
+    }
+
+    footer {
+      background: #0b1e37;
+      color: #9eafc4;
+      padding: 35px 0;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer a {
+      color: #d8e5f6;
+      margin-right: 16px;
+      font-size: 13px;
+    }
+
+    footer p {
+      color: #9eafc4;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 24px, 1040px);
+      }
+
+      .legal-card {
+        padding: 25px 20px;
+      }
+
+      .brand div:last-child {
+        font-size: 13px;
+      }
+
+      .back-link {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      <div class="brand-mark">EI</div>
+
+      <div>
+        Manager.io Nigeria E-invoice Connector
+        <small>MBS / NRS Connector</small>
+      </div>
+    </a>
+
+    <a class="back-link" href="index.html">
+      ← Back to Website
+    </a>
+
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Legal
+    </div>
+
+    <h1>
+      Terms of Service
+    </h1>
+
+    <p>
+      These Terms govern access to and use of Manager.io Nigeria
+      E-invoice Connector, including its trial, annual access,
+      TEST and PRODUCTION processing services.
+    </p>
+
+    <div class="updated">
+      Effective date: 18 August 2026
+    </div>
+
+  </div>
+</section>
+
+
+<main>
+  <div class="container">
+
+    <div class="legal-card">
+
+      <div class="notice">
+        By registering a business, starting a trial, purchasing annual
+        access or using the Connector, you agree to these Terms.
+        If you are acting for a company or other organisation, you
+        confirm that you have authority to act on its behalf.
+      </div>
+
+
+      <h2>1. About the Service</h2>
+
+      <p>
+        Manager.io Nigeria E-invoice Connector (“Connector”, “Service”,
+        “we”, “us” or “our”) is an independent software integration
+        solution developed and supported by Adib Tech Team.
+      </p>
+
+      <p>
+        The Service is designed to assist registered Manager.io businesses
+        in connecting their accounting and invoicing workflow with
+        supported Nigeria e-invoicing processing through applicable
+        MBS/NRS environments.
+      </p>
+
+      <p>
+        The Service may include:
+      </p>
+
+      <ul>
+        <li>Manager.io integration and guided onboarding;</li>
+        <li>separate TEST and PRODUCTION processing routes;</li>
+        <li>Sales Invoice processing;</li>
+        <li>Credit Note processing;</li>
+        <li>NRS IRN and QR Code write-back;</li>
+        <li>payment-status synchronisation;</li>
+        <li>subscription and trial management; and</li>
+        <li>technical support relating to the Connector.</li>
+      </ul>
+
+
+      <h2>2. Independent Service</h2>
+
+      <p>
+        Manager.io Nigeria E-invoice Connector is an independent
+        integration solution.
+      </p>
+
+      <p>
+        Adib Tech Team is not the Nigeria Revenue Service, the Merchant
+        Buyer Solution provider, Manager.io, or any government authority,
+        unless expressly stated otherwise in writing.
+      </p>
+
+      <p>
+        References to NRS, MBS, Manager.io, Selar or other third-party
+        platforms are used only to identify systems or services with
+        which the Connector may interact.
+      </p>
+
+
+      <h2>3. Eligibility and Authority</h2>
+
+      <p>
+        You may use the Service only where:
+      </p>
+
+      <ul>
+        <li>
+          you have authority to configure and process transactions
+          for the relevant Manager.io business;
+        </li>
+
+        <li>
+          the business has the registrations, approvals and credentials
+          required for the e-invoicing environment it intends to use;
+        </li>
+
+        <li>
+          the information supplied during onboarding is accurate
+          and current; and
+        </li>
+
+        <li>
+          use of the Service is lawful in the circumstances.
+        </li>
+      </ul>
+
+
+      <h2>4. Free Trial</h2>
+
+      <p>
+        A qualifying newly registered business may receive a free trial
+        of up to <strong>10 successful submissions</strong>.
+      </p>
+
+      <p>
+        The trial is granted per registered business or tenant and is not
+        intended to be repeatedly recreated to avoid purchasing annual access.
+      </p>
+
+      <p>
+        Only transactions recognised by the Service as successful
+        submissions count against the trial allowance. Validation failures,
+        status checks and other unsuccessful actions do not ordinarily
+        consume a successful-submission allowance.
+      </p>
+
+      <p>
+        When the available trial submissions have been used, further
+        processing may be restricted until valid annual access is activated.
+      </p>
+
+
+      <h2>5. Annual Access</h2>
+
+      <p>
+        The current standard annual access price displayed by the Service
+        or public website is:
+      </p>
+
+      <p>
+        <strong>₦280,000 per registered Manager.io business for 365 days.</strong>
+      </p>
+
+      <p>
+        Prices may be changed for future purchases or renewals.
+        A price change will not normally shorten an annual term that has
+        already been validly activated.
+      </p>
+
+      <p>
+        Annual access begins when the applicable subscription is activated
+        following the required payment verification process.
+      </p>
+
+
+      <h2>6. Payments</h2>
+
+      <p>
+        Payments may be made using approved payment methods made available
+        through the Service, including Selar where configured.
+      </p>
+
+      <p>
+        You are responsible for ensuring that:
+      </p>
+
+      <ul>
+        <li>payment information is accurate;</li>
+        <li>the correct business is identified;</li>
+        <li>the correct amount is paid; and</li>
+        <li>payment evidence or references supplied are genuine.</li>
+      </ul>
+
+      <p>
+        A submitted payment request does not by itself guarantee activation.
+        Payment may be subject to verification before annual access is confirmed.
+      </p>
+
+
+      <h2>7. Refunds and Payment Corrections</h2>
+
+      <p>
+        Refunds, cancellations and payment corrections will be handled
+        reasonably and in accordance with applicable Nigerian law.
+      </p>
+
+      <p>
+        A refund or correction may be considered where, for example:
+      </p>
+
+      <ul>
+        <li>a duplicate payment was made;</li>
+        <li>an incorrect amount was paid;</li>
+        <li>payment was made for a service that was not activated;</li>
+        <li>we are unable to provide the purchased service; or</li>
+        <li>applicable law otherwise requires a refund or remedy.</li>
+      </ul>
+
+      <p>
+        Once annual access has been activated and the Service has been
+        materially used, a refund is not automatically available merely
+        because the customer later chooses to discontinue use.
+      </p>
+
+      <p>
+        Nothing in these Terms removes any refund, cancellation,
+        repair, re-performance or other consumer right that cannot
+        lawfully be excluded.
+      </p>
+
+
+      <h2>8. Renewal</h2>
+
+      <p>
+        Annual access is for a defined 365-day term and does not automatically
+        guarantee a further term unless renewal is completed.
+      </p>
+
+      <p>
+        Renewal may become available during the final part of the current
+        subscription term. Applicable renewal pricing and payment procedures
+        will be shown at the time of renewal.
+      </p>
+
+
+      <h2>9. Customer Responsibilities</h2>
+
+      <p>
+        You are responsible for the accuracy, completeness and lawfulness
+        of information entered into Manager.io and submitted through the Service.
+      </p>
+
+      <p>
+        This includes, where applicable:
+      </p>
+
+      <ul>
+        <li>Seller TIN and business information;</li>
+        <li>customer and buyer details;</li>
+        <li>invoice and Credit Note information;</li>
+        <li>dates, quantities, prices and taxes;</li>
+        <li>currencies;</li>
+        <li>country codes;</li>
+        <li>HSN or service classifications;</li>
+        <li>unit codes;</li>
+        <li>MBS/NRS credentials; and</li>
+        <li>PRODUCTION activation decisions.</li>
+      </ul>
+
+      <p>
+        You should review transactions before submission and should not
+        repeatedly submit a document that has already received an IRN
+        or confirmed submitted status.
+      </p>
+
+
+      <h2>10. TEST and PRODUCTION Environments</h2>
+
+      <p>
+        TEST and PRODUCTION are treated as separate processing environments.
+      </p>
+
+      <p>
+        TEST should be used for sandbox or testing activity.
+        PRODUCTION should be used only when the business has valid live
+        credentials and is ready for official processing.
+      </p>
+
+      <div class="important">
+        You are responsible for ensuring that the correct environment is
+        selected before processing a document. A TEST result should not be
+        treated as proof that an official PRODUCTION submission has occurred.
+      </div>
+
+
+      <h2>11. Credentials and Account Security</h2>
+
+      <p>
+        You must protect credentials, access tokens, passwords,
+        API secrets, certificates and other authentication information.
+      </p>
+
+      <p>
+        You must not knowingly share sensitive credentials with unauthorised
+        persons or publish them in screenshots, public repositories or
+        unsecured communications.
+      </p>
+
+      <p>
+        Notify Adib Tech Team promptly if you reasonably believe an access
+        token or Connector credential has been compromised.
+      </p>
+
+
+      <h2>12. Acceptable Use</h2>
+
+      <p>
+        You must not use the Service to:
+      </p>
+
+      <ul>
+        <li>submit deliberately false or fraudulent invoices;</li>
+        <li>impersonate another business;</li>
+        <li>gain unauthorised access to another tenant;</li>
+        <li>bypass trial or subscription controls;</li>
+        <li>interfere with the security or availability of the Service;</li>
+        <li>introduce malicious code;</li>
+        <li>attempt unauthorised extraction of credentials or private data; or</li>
+        <li>use the Service in violation of applicable law.</li>
+      </ul>
+
+
+      <h2>13. Suspension or Restriction</h2>
+
+      <p>
+        Access may be temporarily suspended or restricted where reasonably
+        necessary to protect the Service, customers, data or third-party systems.
+      </p>
+
+      <p>
+        This may include circumstances involving:
+      </p>
+
+      <ul>
+        <li>suspected fraud;</li>
+        <li>security compromise;</li>
+        <li>fake or disputed payment evidence;</li>
+        <li>material breach of these Terms;</li>
+        <li>attempted unauthorised access;</li>
+        <li>expired subscription access; or</li>
+        <li>technical or regulatory requirements.</li>
+      </ul>
+
+      <p>
+        Where appropriate, access may be restored after the underlying
+        issue has been resolved.
+      </p>
+
+
+      <h2>14. Third-Party Services</h2>
+
+      <p>
+        The Connector depends on or interacts with third-party platforms
+        including Manager.io, MBS/NRS infrastructure, hosting providers,
+        payment providers and internet/network services.
+      </p>
+
+      <p>
+        Third-party outages, API changes, certificate changes,
+        credential changes, maintenance or service restrictions may
+        temporarily affect Connector functionality.
+      </p>
+
+      <p>
+        We do not control third-party systems and cannot guarantee
+        their continuous availability.
+      </p>
+
+
+      <h2>15. Service Availability and Maintenance</h2>
+
+      <p>
+        We aim to maintain reliable service but do not promise uninterrupted
+        or error-free availability.
+      </p>
+
+      <p>
+        The Service may occasionally be unavailable because of:
+      </p>
+
+      <ul>
+        <li>maintenance;</li>
+        <li>security updates;</li>
+        <li>software releases;</li>
+        <li>database or infrastructure maintenance;</li>
+        <li>third-party outages;</li>
+        <li>regulatory or API changes; or</li>
+        <li>events reasonably outside our control.</li>
+      </ul>
+
+
+      <h2>16. Software Changes</h2>
+
+      <p>
+        We may update the Service to improve security, functionality,
+        regulatory compatibility or integration with third-party systems.
+      </p>
+
+      <p>
+        Where reasonably practical, material changes affecting customer
+        workflows will be communicated through the Service, website
+        or other available contact channel.
+      </p>
+
+
+      <h2>17. Intellectual Property</h2>
+
+      <p>
+        The Connector's original software, website design, documentation
+        and related materials remain the property of their respective owners.
+      </p>
+
+      <p>
+        Use of the Service does not transfer ownership of the Connector
+        source code or proprietary implementation materials to the customer.
+      </p>
+
+      <p>
+        Third-party names, trademarks and software remain the property
+        of their respective owners.
+      </p>
+
+
+      <h2>18. Data Protection and Privacy</h2>
+
+      <p>
+        Personal data and business information processed through the
+        Service will be handled in accordance with the applicable
+        Privacy Policy and relevant data-protection requirements.
+      </p>
+
+      <p>
+        Please read our
+        <a href="privacy.html">Privacy Policy</a>
+        when it is published alongside these Terms.
+      </p>
+
+
+      <h2>19. Limitation of Liability</h2>
+
+      <p>
+        To the maximum extent permitted by applicable law, Adib Tech Team
+        will not be responsible for indirect, incidental, special or
+        consequential loss arising solely from use or inability to use
+        the Service.
+      </p>
+
+      <p>
+        We are not responsible for losses caused solely by:
+      </p>
+
+      <ul>
+        <li>incorrect data supplied by the customer;</li>
+        <li>incorrect TEST or PRODUCTION credentials;</li>
+        <li>unauthorised use of customer credentials;</li>
+        <li>third-party system outages or changes;</li>
+        <li>customer submission of duplicate or incorrect documents; or</li>
+        <li>failure to follow reasonable processing instructions.</li>
+      </ul>
+
+      <p>
+        Nothing in these Terms excludes or limits liability, rights or
+        remedies where such exclusion or limitation is prohibited by law.
+      </p>
+
+
+      <h2>20. No Tax, Legal or Regulatory Advice</h2>
+
+      <p>
+        The Connector is a technical integration tool.
+        Its operation does not constitute tax, legal or regulatory advice.
+      </p>
+
+      <p>
+        Customers remain responsible for determining their own tax,
+        invoicing, accounting and regulatory obligations and should obtain
+        professional advice where necessary.
+      </p>
+
+
+      <h2>21. Termination by the Customer</h2>
+
+      <p>
+        A customer may stop using the Service at any time.
+        Discontinuing use does not automatically create a right to refund
+        an already activated subscription, except where a refund or other
+        remedy is required under these Terms or applicable law.
+      </p>
+
+
+      <h2>22. Changes to These Terms</h2>
+
+      <p>
+        We may update these Terms from time to time to reflect changes
+        in the Service, law, regulation or third-party integration requirements.
+      </p>
+
+      <p>
+        The current version will be published on this website with its
+        effective or updated date.
+      </p>
+
+
+      <h2>23. Governing Law</h2>
+
+      <p>
+        These Terms are governed by the laws of the Federal Republic of Nigeria,
+        without excluding any mandatory rights or protections available
+        under applicable law.
+      </p>
+
+
+      <h2>24. Complaints and Dispute Resolution</h2>
+
+      <p>
+        If you have a complaint about the Service, please contact us first
+        so that we can investigate and attempt to resolve the matter promptly.
+      </p>
+
+      <p>
+        Nothing in these Terms prevents a customer from using any complaint,
+        regulatory or judicial process lawfully available to them.
+      </p>
+
+
+      <h2>25. Contact</h2>
+
+      <div class="contact-box">
+
+        <strong>Adib Tech Team</strong>
+
+        <p>
+          Support for Manager.io Nigeria E-invoice Connector
+        </p>
+
+        <p>
+          WhatsApp:
+          <a
+            href="https://wa.me/2348035674941"
+            target="_blank"
+            rel="noopener"
+          >
+            +234 803 567 4941
+          </a>
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:adek4971@gmail.com">
+            adek4971@gmail.com
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer>
+  <div class="container">
+
+    <div class="footer-row">
+
+      <div>
+        <strong>Manager.io Nigeria E-invoice Connector</strong>
+      </div>
+
+      <div>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+
+    </div>
+
+    <p>
+      © <span id="year"></span> Manager.io Nigeria E-invoice Connector.
+      Developed & Supported by Adib Tech Team.
+    </p>
+
+  </div>
+</footer>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
