@@ -483,6 +483,103 @@
       padding: 30px;
     }
 
+    .setup-path {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--light-blue);
+      color: #37577f;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .setup-guide-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .setup-image-card {
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      overflow: hidden;
+      background: #f5f7fa;
+    }
+
+    .setup-image-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .setup-image-caption {
+      padding: 11px 14px;
+      background: white;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .setup-fields {
+      display: grid;
+      gap: 11px;
+    }
+
+    .setup-field {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 15px;
+      background: #fbfcfe;
+    }
+
+    .setup-field small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 3px;
+    }
+
+    .setup-field strong,
+    .setup-field code {
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .setup-field code {
+      overflow-wrap: anywhere;
+      font-family: Consolas, monospace;
+    }
+
+    .setup-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .setup-action {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: white;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .setup-action strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
     .url-label {
       font-weight: 800;
       color: var(--navy);
@@ -1039,7 +1136,9 @@
       .steps,
       .mini-grid,
       .audience-grid,
-      .requirements-list {
+      .requirements-list,
+      .setup-guide-grid,
+      .setup-actions {
         grid-template-columns: 1fr;
       }
 
@@ -1370,8 +1469,9 @@
         <div class="section-kicker">Installation</div>
         <h2>Start from one Manager.io Custom Button</h2>
         <p>
-          The bootstrap button launches the guided setup. The installer then
-          creates or repairs the required integration components.
+          Create one bootstrap Custom Button in Manager.io. It opens the guided
+          setup for the current business and installs the required e-invoicing
+          fields and permanent TEST / PRODUCTION buttons.
         </p>
       </div>
 
@@ -1379,10 +1479,59 @@
 
         <div class="setup-header">
           <h3>Manager.io Bootstrap Setup</h3>
-          <p>Add this URL to the initial Nigeria E-Invoicing Custom Button.</p>
+          <p>Create the Custom Button with the exact values shown below.</p>
         </div>
 
         <div class="setup-body">
+
+          <div class="setup-path">
+            Manager.io → Settings → Custom Buttons → New Custom Button
+          </div>
+
+          <div class="setup-guide-grid">
+
+            <div class="setup-image-card">
+              <a
+                href="images/manager-custom-button-setup.png"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="images/manager-custom-button-setup.png"
+                  alt="Example Manager.io Custom Button setup showing Setup name, URL source, e-invoice endpoint and Settings placement"
+                  loading="lazy"
+                >
+              </a>
+              <div class="setup-image-caption">
+                Example Manager.io Custom Button form. Click the image to view it larger.
+              </div>
+            </div>
+
+            <div class="setup-fields">
+
+              <div class="setup-field">
+                <small>Name</small>
+                <strong>Setup</strong>
+              </div>
+
+              <div class="setup-field">
+                <small>Source</small>
+                <strong>URL</strong>
+              </div>
+
+              <div class="setup-field">
+                <small>Endpoint</small>
+                <code>https://einvoice.adib.com.ng/extension/invoice</code>
+              </div>
+
+              <div class="setup-field">
+                <small>Placement</small>
+                <strong>Settings</strong>
+              </div>
+
+            </div>
+
+          </div>
 
           <div class="url-label">
             Bootstrap / Installation URL
@@ -1405,15 +1554,32 @@
           </div>
 
           <p>
-            After opening the bootstrap button from inside Manager.io,
-            choose <strong>Install Nigeria E-Invoicing</strong> and follow
-            the guided registration process.
+            Save the Custom Button, return to <strong>Settings</strong>, and open
+            <strong>Setup</strong>. On the guided page, choose
+            <strong>Install Nigeria E-Invoicing</strong> and continue with the
+            registration steps.
           </p>
+
+          <div class="setup-actions">
+            <div class="setup-action">
+              <strong>1. Save Setup</strong>
+              Save the new Manager.io Custom Button.
+            </div>
+            <div class="setup-action">
+              <strong>2. Open Setup</strong>
+              Launch the Setup button from Manager.io Settings.
+            </div>
+            <div class="setup-action">
+              <strong>3. Install Integration</strong>
+              Click Install Nigeria E-Invoicing and follow the guided onboarding.
+            </div>
+          </div>
 
           <div class="setup-warning">
             TEST and PRODUCTION extension routes are designed to be launched
             from inside Manager.io so the current business and document
-            context can be detected correctly.
+            context can be detected correctly. Manager.io may display the
+            Settings placement internally as <strong>/settings</strong>.
           </div>
 
         </div>
